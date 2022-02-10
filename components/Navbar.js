@@ -15,13 +15,13 @@ export const Navbar = () => {
         currentAccount: '',
         fetchAccount: false
     })
-
     const [installMetamask, setInstallMetamask] = useState(false);
 
     const [openMenu, setOpenMenu] = useState(false);
-
     useEffect(() => {
+        
         const isConnected = async() => {
+
             const accounts = await web3.eth.getAccounts();
             setLogin({
                 ...login,
