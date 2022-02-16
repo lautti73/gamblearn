@@ -32,11 +32,9 @@ import Web3 from "web3";
  */
 const initWeb3 = async () => {
   let web3 = null;
-
   // Get the provider, or null if it couldn't be detected.
-  const provider = await detectEthereumProvider({
-    mustBeMetaMask: true
-  });
+  
+  console.log(provider)
 
   if (provider) {
     console.log("MetaMask Ethereum provider successfully detected!");

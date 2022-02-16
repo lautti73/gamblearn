@@ -4,14 +4,18 @@ import detectEthereumProvider from '@metamask/detect-provider';
 let web3;
 
   if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
-  
+
       const provider = window.ethereum;
-  
+      
       if (provider) {
         startApp(provider);
       } else {
         console.log('Please install MetaMask!');
       }
+ 
+
+        
+
   
 
     function startApp(provider) {
@@ -20,9 +24,10 @@ let web3;
       if (provider !== window.ethereum) {
         console.error('Do you have multiple wallets installed?');
       } else {
-        web3 = new Web3(provider)
+        web3 = new Web3(provider);
       }
       // Access the decentralized web!
+      console.log('lanzada')
     }
   
     ethereum.on('chainChanged', reloadPage);
